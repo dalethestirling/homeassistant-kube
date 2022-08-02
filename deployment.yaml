@@ -14,7 +14,6 @@ spec:
       labels:
         app: homeassistant
     spec:
-      hostNetwork: true
       containers:
         - image: ghcr.io/home-assistant/home-assistant:stable
           imagePullPolicy: Always
@@ -24,14 +23,6 @@ spec:
               value: "Australia/Brisbane"
           securityContext:
             privileged: true
-            capabilities:
-              add:
-                - NET_ADMIN
-                - NET_BIND_SERVICE
-                - NET_RAW
-                - NET_ADMIN
-                - SYS_NICE
-                - CHOWN
           ports:
             - containerPort: 8123
               protocol: TCP
