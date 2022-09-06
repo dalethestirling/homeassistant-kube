@@ -24,7 +24,7 @@ jobs:
           gist_description: Kubernetes files for Home assistant on Kubernetes
           github_file: service.yaml
       - uses: popsiclestick/gist-sync-action@v1.2.0
-        id: sync-service
+        id: sync-namespace
         with:
           auth: ${{ secrets.GIST_TOKEN }}
           gist_url: https://gist.github.com/dalethestirling/4afce63eb152c8763bb7b40260bcac39
